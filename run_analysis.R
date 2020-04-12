@@ -58,4 +58,4 @@ names(tdata) <- gsub("gravity", " Gravity ", names(tdata))
 names(tdata) <- gsub("Jerk", " Jerk ", names(tdata), ignore.case = TRUE)
 ##From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.##
 tdatamean <- tdata %>% group_by(subject, Activity, Origin) %>% summarise_all(list(mean=mean))
-write.table(tdatamean, "tdatamean2.txt", row.names = FALSE)
+write.table(tdatamean, "tdatamean.txt", row.names = FALSE)
